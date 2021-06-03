@@ -247,7 +247,7 @@ impl Runtime {
         let inputs = transfer
             .inputs
             .iter()
-            .filter(|outpoint| !asset.allocations(**outpoint).is_empty())
+            .filter(|outpoint| asset.allocations(**outpoint).is_empty())
             .cloned()
             .collect();
         let transition = rgb20::transfer(
